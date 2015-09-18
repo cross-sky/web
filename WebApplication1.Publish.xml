@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="E:\save" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="09/17/2015 08:56:16" />
+    <file relUrl="css/master.css" publishTime="09/16/2015 23:02:53" />
+    <file relUrl="images/body_bg.jpg" publishTime="11/16/2009 03:37:16" />
+    <file relUrl="bin/WebApplication1.pdb" publishTime="09/16/2015 23:17:43" />
+    <file relUrl="bin/WebApplication1.dll" publishTime="09/16/2015 23:17:43" />
+    <file relUrl="images/bd_top.jpg" publishTime="11/16/2009 15:55:42" />
+    <file relUrl="script/jquery.min.js" publishTime="09/04/2015 22:26:26" />
+    <file relUrl="index.aspx" publishTime="09/17/2015 08:54:04" />
+    <file relUrl="client.aspx" publishTime="09/16/2015 17:06:47" />
+    <file relUrl="script/jquery.js" publishTime="09/04/2015 22:26:54" />
+    <file relUrl="script/readcl.js" publishTime="09/16/2015 17:05:18" />
+    <file relUrl="css/client.css" publishTime="09/16/2015 10:58:17" />
+  </publishProfile>
+</publishData>
