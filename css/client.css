@@ -87,7 +87,7 @@
     line-height:1.5em;
     padding:2px;
     width: auto;
-    background-image:url('../images/head.png');
+    background-image:url('../images/content-bg.png');
    /* filter:alpha(opacity=10); */
     background-repeat:no-repeat;
 }
@@ -100,6 +100,7 @@
 
 .cpstyle
 {
+    font-size:16px;
     text-align:left;
     padding-left:300px;
     margin-bottom: 2px;
@@ -153,7 +154,7 @@
 #total
 {
     clear:both;
-    height:60px;
+    height:30px;
     width:970px;
     line-height:2em;
     text-align:center;
@@ -164,7 +165,7 @@
 #footer
 {
     clear:both;
-    height:60px;
+    height:30px;
     width:970px;
     line-height:2em;
     text-align:center;
@@ -191,29 +192,29 @@
 .label_bt1
 {
     color:Blue;
-    padding-left:330px;
+    padding-left:250px;
     
 }
 
 .label_bt2
 {
     color:Blue;
-    padding-left:100px;    
+    padding-left:250px;    
 }
 
 .label_bt3
 {
     color:Blue;
-    padding-left:100px;    
+    padding-left:530px;    
 }
 
 .label_bt4
 {
     color:Blue;
-    padding-left:100px;    
+    padding-left:140px;    
 }
 .label_bt5
 {
     color:Blue;
-    padding-left:100px;    
+    padding-left:565px;    
 }

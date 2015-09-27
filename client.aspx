@@ -35,30 +35,34 @@
         <br />
         <p id="locate1" class="cpstyle">珠海住建局项目&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>        
         <br />
-        <a href="index.aspx" class="castyle" >数据历史记录</a>
+        <a href="index.aspx" class="castyle"  >数据历史记录</a>
         <br />
         <asp:Label ID="Label1" runat="server" Text="集热器出水口温度:"  CssClass="label_bt1"></asp:Label>
         <asp:Label ID="Lat2" runat="server" Text="Label" CssClass="label_rt2"></asp:Label>
+	    <asp:Label ID="Lau1" runat="server" Text="今日流量:" CssClass="label_bt4"></asp:Label>
+        <asp:Label ID="Lat5" runat="server" Text="Label" CssClass="label_rt2"></asp:Label>
         <br />
-        <asp:Label ID="Label3" runat="server" Text="回水管温度:"  CssClass="label_bt2"></asp:Label>
-        <asp:Label ID="Lat3" runat="server" Text="Label" CssClass="label_rt2" ></asp:Label>
+        <asp:Label ID="Lau2" runat="server" Text="总流量:" CssClass="label_bt5"></asp:Label>
+        <asp:Label ID="Lat6" runat="server" Text="Label" CssClass="label_rt2"></asp:Label>   
+        <br />     
+        <br />        
+        <br />
+        <br />
         <br />
         <asp:Label ID="Label5" runat="server" Text="水箱温度:"  CssClass="label_bt3"></asp:Label>
         <asp:Label ID="Lat4" runat="server" Text="Label" CssClass="label_rt2" ></asp:Label>
         <br />
+	    <br />
+	    <br />
         <br />
-        <asp:Label ID="La" runat="server" Text="Label"></asp:Label>
-        <br />
-        <br />
-        <asp:Label ID="Lau1" runat="server" Text="今日流量:"></asp:Label>
-        <asp:Label ID="Lat5" runat="server" Text="Label" CssClass="label_rt2"></asp:Label>
-        <br />
-        <asp:Label ID="Lau2" runat="server" Text="总流量:"></asp:Label>
-        <asp:Label ID="Lat6" runat="server" Text="Label" CssClass="label_rt2"></asp:Label>
-        <br />
-        <br />
+	    <asp:Label ID="Label3" runat="server" Text="回水管温度:"  CssClass="label_bt2"></asp:Label>
+        <asp:Label ID="Lat3" runat="server" Text="Label" CssClass="label_rt2" ></asp:Label>
+	    <br />
+        <br />  
     </div>
-    <div id="total">total </div>
+    <div id="total">
+    <asp:Label ID="La" runat="server" Text="Label"></asp:Label>
+    </div>
     <div id="footer">Footer</div>
     </div>
     </form>

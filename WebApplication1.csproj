@@ -90,6 +90,7 @@
     <Content Include="css\master.css" />
     <Content Include="images\bd_top.jpg" />
     <Content Include="images\body_bg.jpg" />
+    <Content Include="images\content-bg.png" />
     <Content Include="index.aspx" />
     <Content Include="script\jquery.js" />
     <Content Include="script\jquery.min.js" />

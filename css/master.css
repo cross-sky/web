@@ -101,7 +101,10 @@
     text-align:center;
 }
     
-
+#content a
+{
+    text-indent:1em;
+}
 
 #content a:link
 {

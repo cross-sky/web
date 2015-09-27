@@ -76,7 +76,7 @@ function Time_onclick() {
         <br />
         <br />
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-            AllowPaging="True" PageSize="2" CssClass="datable" border="1" CellPadding="2" CellSpacing="1" 
+            AllowPaging="True" PageSize="20" CssClass="datable" border="1" CellPadding="2" CellSpacing="1" 
             OnPageIndexChanging="GridView1_PageIndexChanging" 
             onselectedindexchanged="GridView1_SelectedIndexChanged">
             <RowStyle CssClass="lupbai" />
@@ -101,13 +101,13 @@ function Time_onclick() {
                 <asp:BoundField DataField="mv2" HeaderText="电压2" >
                 <HeaderStyle Width="70px" />
                 </asp:BoundField>
-                <asp:BoundField DataField="t1" HeaderText="集热器出水温度" >
+                <asp:BoundField DataField="t1" HeaderText="水箱温度" >
                 <HeaderStyle Width="70px" />
                 </asp:BoundField>
-                <asp:BoundField DataField="t2" HeaderText="回水管温度" >
+                <asp:BoundField DataField="t2" HeaderText="集热器出水温度" >
                 <HeaderStyle Width="70px" />
                 </asp:BoundField>
-                <asp:BoundField DataField="t3" HeaderText="水箱温度" >
+                <asp:BoundField DataField="t3" HeaderText="回水管温度" >
                 <HeaderStyle Width="70px" />
                 </asp:BoundField>
             </Columns>

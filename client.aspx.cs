@@ -66,9 +66,9 @@ namespace WebApplication1
         {
             
             dbcvar = BLL.BLL_client.SelectLatestValue(dbstring);
-            Lat2.Text = dbcvar.Rows[0][8].ToString() + "℃";
-            Lat3.Text = dbcvar.Rows[0][9].ToString() + "℃";
-            Lat4.Text = dbcvar.Rows[0][10].ToString() + "℃";
+            Lat4.Text = dbcvar.Rows[0][8].ToString() + "℃";
+            Lat2.Text = dbcvar.Rows[0][9].ToString() + "℃";
+            Lat3.Text = dbcvar.Rows[0][10].ToString() + "℃";
 
             mlist.Add(Lat2.Text);
             mlist.Add(Lat3.Text);
