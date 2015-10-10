@@ -92,8 +92,11 @@
     <Content Include="images\body_bg.jpg" />
     <Content Include="images\content-bg.png" />
     <Content Include="index.aspx" />
+    <Content Include="script\exporting.js" />
+    <Content Include="script\highcharts.js" />
     <Content Include="script\jquery.js" />
     <Content Include="script\jquery.min.js" />
+    <Content Include="script\mycharts.js" />
     <Content Include="script\readcl.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -106,6 +109,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ajax\chartjson.ashx.cs">
+      <DependentUpon>chartjson.ashx</DependentUpon>
+    </Compile>
     <Compile Include="BLL\BLL_client.cs" />
     <Compile Include="BLL\BLL_Index.cs" />
     <Compile Include="client.aspx.cs">
@@ -126,7 +132,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ajax\chartjson.ashx" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>

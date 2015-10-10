@@ -8,9 +8,18 @@
     <link href="css/client.css" rel="stylesheet" type="text/css" />
     <script src="script/jquery.min.js" type="text/javascript"></script>
     <script src="script/readcl.js" type="text/javascript"></script>
+    <script src="script/highcharts.js" type="text/javascript"></script>
+    <script src="script/exporting.js" type="text/javascript"></script>
+    <script src="script/mycharts.js" type="text/javascript"></script>
+
     <script type="text/javascript">
         setInterval(updata1, 5000);
-       // setInterval(updata, 2000);
+        // setInterval(updata, 2000);
+
+        var dataTmp = "";
+        $(function () {
+            GetSeriesValue();
+        });
     </script>
 
 </head>
@@ -28,7 +37,7 @@
     </ul> 
     
     <div id="siderbar-a">
-    <iframe name="weather_inc" src="http://tianqi.xixik.com/cframe/4" width="130" height="220" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" ></iframe>
+    <iframe name="weather_inc" src="http://cache.xixik.com.cn/4/zhuhai/" width="130" height="320" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" ></iframe>
     </div> 
       
     <div id="content">
@@ -60,6 +69,22 @@
 	    <br />
         <br />  
     </div>
+
+    <div>
+    <table ">
+    	<thead>
+            <tr>
+                <th>numbers</th>
+                <th>types</th>
+            </tr>
+        </thead>
+        <tbody id="tbody1"></tbody>
+    </table>
+
+    <p id="test1"> lala </p>
+    </div>
+    <div id="container"></div>
+
     <div id="total">
     <asp:Label ID="La" runat="server" Text="Label"></asp:Label>
     </div>

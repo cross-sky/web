@@ -74,8 +74,49 @@ namespace WebApplication1.DAL
 
             mysqlVar.sqlcmd.ExecuteNonQuery();
             mysqlVar.sqlconn.Close();
-        }
+        }  
     
+    }
+
+    public class PubMysqlMethod
+    {
+        public DataTable pDalSelectDBpar(string sqlstr, MySqlParameter[] SQLCMDpas)
+        {
+            //创建链接对象
+            //mysqlVar.sqlconn = new MySqlConnection(System.Configuration.ConfigurationSettings.AppSettings["connstr"].ToString());
+
+            //mysqlVar chartSqlVar = new mysqlVar();
+            pubsqlVar chartSqlVar = new pubsqlVar();
+
+            chartSqlVar.sqlconn = new MySqlConnection(ConfigurationManager.ConnectionStrings["connstr"].ToString());
+
+            try
+            {
+                chartSqlVar.sqlconn.Open();
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show("open batabase error" + ex.Message);
+            }
+            //创建cmd
+            chartSqlVar.sqlstr = sqlstr;
+            chartSqlVar.sqlcmd = new MySqlCommand(chartSqlVar.sqlstr, chartSqlVar.sqlconn);
+            chartSqlVar.sqlcmd.CommandType = CommandType.StoredProcedure;
+            //利用数组动态参数化存储过程的参数
+            foreach (MySqlParameter var in SQLCMDpas)
+            {
+                chartSqlVar.sqlcmd.Parameters.Add(var);
+            }
+
+            MySqlDataReader dr = chartSqlVar.sqlcmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            chartSqlVar.sqlconn.Close();
+            dr.Close();
+            return dt;
+
+            // return dt;
+        }
     }
 
 }

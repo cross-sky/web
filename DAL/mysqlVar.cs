@@ -20,4 +20,17 @@ namespace WebApplication1.DAL
         public static DataRow dr;//定义行
         public static MySqlConnection sqlconn;
     }
+
+    public class pubsqlVar
+    {
+        public  string connstr;
+        public  MySqlCommand sqlcmd;//定义命令语句
+        public  string sqlstr;
+        public  MySqlDataAdapter sqlda;//定义识别器
+        public  DataSet ds = new DataSet();//定义数据集
+        public  MySqlDataReader sqldr;//定义只读器
+        public  DataTable dt;//定义数据表
+        public  DataRow dr;//定义行
+        public  MySqlConnection sqlconn;
+    }
 }
