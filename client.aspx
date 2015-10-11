@@ -11,7 +11,7 @@
     <script src="script/highcharts.js" type="text/javascript"></script>
     <script src="script/exporting.js" type="text/javascript"></script>
     <script src="script/mycharts.js" type="text/javascript"></script>
-
+    <script src="script/chartThemes/grid-light.js" type="text/javascript"></script>
     <script type="text/javascript">
         setInterval(updata1, 5000);
         // setInterval(updata, 2000);

@@ -61,7 +61,14 @@ function charts(dataTmp) {
             text: 'Source: lacs'
         },
         xAxis: {
-            categories: ['0:00', '1:00', '2:00', '3:00',]
+            title: {
+                text: 'hours'
+            },
+            categories: ['0:00', '1:00', '2:00', '3:00', '4:00',
+                         '5:00', '6:00', '7:00', '8:00', '9:00',
+                         '10:00', '11:00', '12:00', '13:00', '14:00',
+                         '15:00', '16:00', '17:00', '18:00', '19:00',
+                         '20:00', '21:00', '22:00', '23:00']
         },
         yAxis: {
             title: {
@@ -71,7 +78,9 @@ function charts(dataTmp) {
                 formatter: function () {
                     return this.value + '°';
                 }
-            }
+            },
+            tickPositions: [0, 15, 30, 45, 60, 75]
+            
         },
         tooltip: {
             valueSuffix: '℃',
@@ -79,6 +88,9 @@ function charts(dataTmp) {
             shared:true
         },
         plotOptions: {
+            series: {
+                    connectNulls: true //连接数据为null的前后点
+            },
             spline: {
                 marker: {
                     radius: 4,
@@ -90,4 +102,6 @@ function charts(dataTmp) {
         series: eval("[" + dataTmp + "]")
 
     });
-}      
+}
+
+      

@@ -27,8 +27,8 @@ namespace WebApplication1.ajax
 
             BLL_PubClient BllChart = new BLL_PubClient();
 
-            string strcurrent = DateTime.Now.ToString("yyyy-MM-dd");
-            //string strcurrent = "2015-09-16";
+            //string strcurrent = DateTime.Now.ToString("yyyy-MM-dd");
+            string strcurrent = "2015-09-16";
 
             fc = BllChart.ChartValue("dbgprs.gprs", strcurrent);
             string callback = context.Request["callback"];
@@ -108,26 +108,44 @@ namespace WebApplication1.ajax
             Dictionary<string, object> dict3 = new Dictionary<string, object>();
 
             dict1.Add("name","水箱温度");
-            dict2.Add("name","出水温度");
-            dict3.Add("name","回水温度");
+            dict2.Add("name","集热器出水温度");
+            dict3.Add("name","集热器回水温度");
 
             string ttemp="";
-            for (int k = 0; k < dt.Rows.Count; k++ )
+
+            if (dt.Rows.Count >= 24)
             {
-                ttemp = "t"+k;
-                if (dt.Rows[k][0].ToString() == k.ToString())
+                for (int k = 0; k < dt.Rows.Count; k++)
                 {
+                    ttemp = "t" + dt.Rows[k][0].ToString();
                     dict1.Add(ttemp, dt.Rows[k][1].ToString());
                     dict2.Add(ttemp, dt.Rows[k][2].ToString());
                     dict3.Add(ttemp, dt.Rows[k][3].ToString());
                 }
-                else
+            } 
+            else
+            {
+                int k = 0;
+                int j = dt.Rows.Count;
+                for (int i = 0; i < 24; i++ )
                 {
-                    dict1.Add(ttemp,"null");
-                    dict2.Add(ttemp,"null");
-                    dict3.Add(ttemp,"null");
+                    ttemp = "t" + i;
+                    if (k < j && i == Int32.Parse(dt.Rows[k][0].ToString()))
+                    {
+                        dict1.Add(ttemp, dt.Rows[k][1].ToString());
+                        dict2.Add(ttemp, dt.Rows[k][2].ToString());
+                        dict3.Add(ttemp, dt.Rows[k][3].ToString());
+                        k++;
+                    }
+                    else
+                    {
+                        dict1.Add(ttemp, "null");
+                        dict2.Add(ttemp, "null");
+                        dict3.Add(ttemp, "null");
+                    }
                 }
             }
+
             list.Add(dict1);
             list.Add(dict2);
             list.Add(dict3);
